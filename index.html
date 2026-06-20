@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>谢辉 — AI视觉产品 · 智能制造解决方案销售</title>
+<meta name="description" content="谢辉 | 工业机器人技术专业，2年直销与电商运营经验，专注AI视觉产品及智能制造解决方案销售">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:        #FFFFFF;
+  --fg:        #000000;
+  --muted:     #F5F5F5;
+  --muted-fg:  #525252;
+  --border-lt: #E5E5E5;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body:    "Source Serif 4", Georgia, serif;
+  --font-mono:    "JetBrains Mono", monospace;
+
+  --max-w: 76rem;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: auto; background: var(--bg); }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.025;
+}
+
+.section-rule {
+  border: none;
+  height: 4px;
+  background: var(--fg);
+  margin: 0;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: clamp(80px, 12vw, 160px) 0 clamp(40px, 6vw, 80px);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: end;
+  border: 1px solid var(--fg);
+}
+
+@media (min-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr auto; }
+}
+
+.hero-name-block {
+  padding: clamp(32px, 6vw, 64px) clamp(24px, 4vw, 48px);
+  border-bottom: 1px solid var(--fg);
+}
+
+@media (min-width: 768px) {
+  .hero-name-block {
+    border-bottom: none;
+    border-right: 1px solid var(--fg);
+  }
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 180px);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--fg);
+}
+
+.hero-meta-block {
+  padding: clamp(20px, 3vw, 32px) clamp(24px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-subtitle {
+  font-family: var(--font-mono);
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  line-height: 1.6;
+}
+
+.hero-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-fg);
+  letter-spacing: 0.06em;
+}
+
+.hero-contact-list li {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-contact-list .label {
+  color: var(--fg);
+  font-weight: 500;
+  min-width: 60px;
+}
+
+/* ============================================================
+   INVERTED STATS
+   ============================================================ */
+.stats-section {
+  background: var(--fg);
+  color: #fff;
+  position: relative;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.stats-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+}
+
+.stats-section .container { position: relative; z-index: 1; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 768px) {
+  .stats-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
+}
+
+.stat-cell {
+  text-align: center;
+  padding: clamp(40px, 8vw, 72px) 16px;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  position: relative;
+}
+
+.stat-cell:nth-child(2n) { border-right: none; }
+@media (min-width: 768px) {
+  .stat-cell:nth-child(2n) { border-right: 1px solid rgba(255,255,255,0.12); }
+  .stat-cell:nth-child(4n) { border-right: none; }
+}
+
+.stat-cell:nth-child(n+3) { border-bottom: none; }
+@media (min-width: 768px) {
+  .stat-cell { border-bottom: none; }
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 120px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+}
+
+.stat-value .unit {
+  font-family: var(--font-mono);
+  font-size: 0.22em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-top: 8px;
+}
+
+.stat-cell::after {
+  content: '+';
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  color: rgba(255,255,255,0.2);
+}
+
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  margin-bottom: 8px;
+}
+
+.section-headline {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  padding-bottom: clamp(16px, 3vw, 28px);
+  border-bottom: 2px solid var(--fg);
+}
+
+/* ============================================================
+   SELF-EVALUATION
+   ============================================================ */
+.about-section {
+  padding: clamp(60px, 10vw, 140px) 0;
+  position: relative;
+}
+
+.about-text {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2.5vw, 22px);
+  line-height: 1.9;
+  max-width: 720px;
+}
+
+.boxed-dropcap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  padding: 10px 16px;
+  margin-right: 16px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  border: 3px solid var(--fg);
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 40px;
+  max-width: 720px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border: 1.5px solid var(--fg);
+  color: var(--fg);
+  background: var(--bg);
+  border-radius: 0;
+  transition: background 100ms, color 100ms;
+  cursor: default;
+}
+
+.tag:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* ============================================================
+   WORK EXPERIENCE
+   ============================================================ */
+.exp-section {
+  padding: clamp(60px, 10vw, 140px) 0;
+}
+
+.exp-grid { display: flex; flex-direction: column; }
+
+.exp-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1.5px solid var(--fg);
+  margin-bottom: -1.5px;
+  transition: background 100ms, color 100ms;
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .exp-card { grid-template-columns: 200px 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .exp-card { grid-template-columns: 260px 1fr; }
+}
+
+.exp-card:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.exp-sidebar {
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 3vw, 28px);
+  border-bottom: 1.5px solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 100ms, color 100ms, border-color 100ms;
+}
+
+@media (min-width: 768px) {
+  .exp-sidebar {
+    border-bottom: none;
+    border-right: 1.5px solid var(--fg);
+  }
+}
+
+.exp-card:hover .exp-sidebar {
+  background: var(--fg);
+  color: var(--bg);
+  border-right-color: var(--bg);
+}
+
+.exp-date {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted-fg);
+  transition: color 100ms;
+}
+
+.exp-card:hover .exp-date { color: var(--bg); }
+
+.exp-company-name {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  transition: color 100ms;
+}
+
+.exp-card:hover .exp-company-name { color: var(--bg); }
+
+.exp-role-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  transition: color 100ms;
+}
+
+.exp-card:hover .exp-role-tag { color: var(--bg); }
+
+.exp-body {
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.exp-block-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 100ms;
+}
+
+.exp-block-label::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 1.5px;
+  background: var(--fg);
+  transition: background 100ms;
+}
+
+.exp-card:hover .exp-block-label,
+.exp-card:hover .exp-block-label::before {
+  color: var(--bg);
+  background: var(--bg);
+}
+
+.exp-block-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--muted-fg);
+  transition: color 100ms;
+}
+
+.exp-card:hover .exp-block-text { color: var(--bg); }
+
+/* ============================================================
+   EDUCATION
+   ============================================================ */
+.edu-section {
+  padding: clamp(60px, 10vw, 140px) 0;
+  position: relative;
+}
+
+.edu-card {
+  border: 1.5px solid var(--fg);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .edu-card { grid-template-columns: 1fr auto; }
+}
+
+.edu-body {
+  padding: clamp(28px, 5vw, 48px) clamp(24px, 4vw, 40px);
+}
+
+.edu-school {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.edu-major-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-fg);
+  margin-top: 8px;
+}
+
+.edu-details {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--muted-fg);
+  margin-top: 16px;
+  line-height: 1.8;
+}
+
+.edu-sidebar {
+  padding: clamp(28px, 5vw, 48px) clamp(24px, 4vw, 40px);
+  border-top: 1.5px solid var(--fg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--muted-fg);
+}
+
+@media (min-width: 768px) {
+  .edu-sidebar {
+    border-top: none;
+    border-left: 1.5px solid var(--fg);
+  }
+}
+
+.edu-sidebar .honor {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.edu-sidebar .honor::before {
+  content: '\2020';
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1;
+}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-section {
+  padding: clamp(60px, 10vw, 140px) 0;
+}
+
+.skills-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1.5px solid var(--fg);
+}
+
+@media (min-width: 640px) {
+  .skills-matrix { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .skills-matrix { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+}
+
+.skill-item {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: clamp(16px, 3vw, 24px) 8px;
+  border-right: 1px solid var(--border-lt);
+  border-bottom: 1px solid var(--border-lt);
+  transition: background 100ms, color 100ms;
+  cursor: default;
+  color: var(--muted-fg);
+}
+
+.skill-item:nth-child(2n) { border-right: none; }
+@media (min-width: 640px) {
+  .skill-item:nth-child(2n) { border-right: 1px solid var(--border-lt); }
+  .skill-item:nth-child(3n) { border-right: none; }
+}
+@media (min-width: 1024px) {
+  .skill-item:nth-child(3n) { border-right: 1px solid var(--border-lt); }
+  .skill-item:nth-child(5n) { border-right: none; }
+}
+
+.skill-item:hover {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  padding: clamp(24px, 4vw, 40px) 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted-fg);
+  letter-spacing: 0.08em;
+  border-top: 1px solid var(--border-lt);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .hero-name { font-size: clamp(48px, 16vw, 80px); }
+  .stat-value { font-size: clamp(36px, 10vw, 56px); }
+  .section-headline { font-size: clamp(28px, 8vw, 48px); }
+  .boxed-dropcap::first-letter { font-size: 52px; padding: 6px 12px; }
+}
+
+/* ============================================================
+   FOCUS STATES
+   ============================================================ */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--fg);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+@media print {
+  @page { margin: 14mm 12mm; size: A4; }
+
+  body { font-size: 10px; line-height: 1.5; }
+  body::after { display: none; }
+  .stats-section::before { display: none; }
+  .stats-section { background: #000; color: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .hero { padding: 16px 0; }
+  .hero-name { font-size: 42px; }
+  .hero-grid { border: 1px solid #000; }
+  .hero-subtitle { font-size: 9px; }
+
+  section { padding: 16px 0; }
+  .section-rule { height: 2px; }
+  .section-headline { font-size: 24px; margin-bottom: 16px; padding-bottom: 8px; }
+
+  .stat-value { font-size: 32px !important; }
+  .stat-cell { padding: 16px 8px; }
+  .stat-label { font-size: 7px; }
+
+  .about-text { font-size: 12px; max-width: 100%; }
+  .boxed-dropcap::first-letter { font-size: 36px; padding: 5px 8px; }
+
+  .exp-card { grid-template-columns: 160px 1fr; }
+  .exp-sidebar { padding: 14px; }
+  .exp-body { padding: 14px; gap: 10px; }
+  .exp-company-name { font-size: 16px; }
+  .exp-block-text { font-size: 10px; }
+  .exp-block-label { font-size: 7px; }
+  .exp-date { font-size: 8px; }
+
+  .edu-card { grid-template-columns: 1fr auto; }
+  .edu-body { padding: 14px; }
+  .edu-school { font-size: 20px; }
+  .edu-details { font-size: 10px; }
+  .edu-sidebar { padding: 14px; font-size: 8px; }
+
+  .skills-matrix { grid-template-columns: repeat(5, 1fr); }
+  .skill-item { font-size: 7px; padding: 8px 4px; }
+
+  .site-footer { padding: 10px 0; font-size: 7px; }
+
+  .exp-card, .edu-card, .hero-grid, .stat-cell { page-break-inside: avoid; }
+  .section-rule { page-break-after: avoid; }
+
+  .exp-card:hover, .exp-card:hover * { background: #fff; color: #000; }
+  .tag:hover { background: #fff; color: #000; }
+  .skill-item:hover { background: #fff; color: #525252; }
+  .exp-card:hover .exp-block-label::before { background: #000; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-name-block">
+        <h1 class="hero-name">谢辉</h1>
+      </div>
+      <div class="hero-meta-block">
+        <p class="hero-subtitle">AI 视觉产品<br>智能制造解决方案销售</p>
+        <ul class="hero-contact-list">
+          <li><span class="label">出生</span> 2001.10</li>
+          <li><span class="label">电话</span> 18818459703</li>
+          <li><span class="label">邮箱</span> 2809693454@qq.com</li>
+          <li><span class="label">驾照</span> C1</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<hr class="section-rule">
+
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <div class="stat-value">80<span class="unit">张/月</span></div>
+        <div class="stat-label">招商银行 月均办卡量</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value">Top&nbsp;15</div>
+        <div class="stat-label">新人梯队排名</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value">4.1&nbsp;&rarr;&nbsp;4.6</div>
+        <div class="stat-label">店铺评分跃升</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value">10<span class="unit">台</span></div>
+        <div class="stat-label">机器人系统联调</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section class="about-section">
+  <div class="container">
+    <div class="section-kicker">[ 自我评价 ]</div>
+    <h2 class="section-headline">技术底色 &times;<br>销售执行</h2>
+    <p class="about-text boxed-dropcap">
+      工业机器人专业科班出身，具备工厂产线设备调试经验，能看懂制造业工艺痛点。毕业后在直销获客与电商运营领域积累 2 年实战经验，形成「技术理解 + 销售执行 + 数据驱动」的复合能力结构。现希望回归工业自动化方向，将技术底色与商务能力结合，深耕 AI 视觉产品及智能制造解决方案销售。
+    </p>
+    <div class="tag-grid">
+      <span class="tag">工业基因</span>
+      <span class="tag">陌拜抗压</span>
+      <span class="tag">数据驱动</span>
+      <span class="tag">新人 Top 15</span>
+      <span class="tag">10 台机器人联调</span>
+      <span class="tag">差评率 &darr;30%</span>
+      <span class="tag">能出差</span>
+      <span class="tag">能应酬</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section class="exp-section">
+  <div class="container">
+    <div class="section-kicker">[ 工作经历 ]</div>
+    <h2 class="section-headline">职业轨迹</h2>
+    <div class="exp-grid">
+
+      <article class="exp-card">
+        <div class="exp-sidebar">
+          <span class="exp-date">2024.08 &ndash; 2026.05</span>
+          <div>
+            <h3 class="exp-company-name">深圳市弘钧<br>科技有限公司</h3>
+            <span class="exp-role-tag">亚马逊运营主管</span>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-block">
+            <div class="exp-block-label">问题诊断与产品优化</div>
+            <p class="exp-block-text">建立用户反馈分析机制，从差评、退货数据中精准归因产品缺陷，独立输出数据报告并推动开发团队完成尺码表、安装说明书等改进项，核心产品差评率下降 30%，店铺评分从 4.1 跃升至 4.6。</p>
+          </div>
+          <div class="exp-block">
+            <div class="exp-block-label">成本优化与 ROI 思维</div>
+            <p class="exp-block-text">主导包装方案数据测算，联合采购与设计团队优化包装尺寸，实现单件运输成本降低 2.3 美元。</p>
+          </div>
+          <div class="exp-block">
+            <div class="exp-block-label">多店铺统筹管理</div>
+            <p class="exp-block-text">同时运营 2 个店铺，日均处理 SKU 数据 200+ 条，负责 FBA 库存规划与补货节奏把控，任职期间零违规、零断货事故。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-sidebar">
+          <span class="exp-date">2023.06 &ndash; 2024.06</span>
+          <div>
+            <h3 class="exp-company-name">招商银行</h3>
+            <span class="exp-role-tag">对公客户经理</span>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-block">
+            <div class="exp-block-label">直销获客与业绩达成</div>
+            <p class="exp-block-text">以地推、驻点、陌拜等方式独立开拓客户，月均办卡 80 张，在新人梯队中排名前 15，持续超额完成月度 KPI。独立跑通「客户开发 &rarr; 产品讲解 &rarr; 异议处理 &rarr; 签约 &rarr; 售后」全链路，日均面谈潜在客户 50+ 人，具备成熟的面对面销售与抗压能力。</p>
+          </div>
+          <div class="exp-block">
+            <div class="exp-block-label">客户关系与异议处理</div>
+            <p class="exp-block-text">多次独立化解客户投诉与争议，擅长在高拒绝率场景下调整沟通策略、维系客户关系，保持稳定的积极成交心态。</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-card">
+        <div class="exp-sidebar">
+          <span class="exp-date">2022.10 &ndash; 2023.03</span>
+          <div>
+            <h3 class="exp-company-name">佛山市智科<br>机器人科技</h3>
+            <span class="exp-role-tag">技术实习生</span>
+          </div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-block">
+            <div class="exp-block-label">工业机器人系统运维与调试</div>
+            <p class="exp-block-text">负责产线焊接、搬运机器人日常运行监控，通过传感器数据实时监测设备状态，独立识别并上报定位偏差等异常，实习期间零事故。</p>
+          </div>
+          <div class="exp-block">
+            <div class="exp-block-label">卫浴企业喷釉自动化产线升级项目</div>
+            <p class="exp-block-text">深度参与某卫浴企业产线改造，协助完成 10 台国产机器人系统联调，承担末端执行器安装调试中的数据记录与问题反馈。项目通过客户验收并顺利量产，由此积累了制造业产线节拍、工艺配合与品控的一线认知。</p>
+          </div>
+          <div class="exp-block">
+            <div class="exp-block-label">机器人编程与离线仿真</div>
+            <p class="exp-block-text">使用 RobotStudio 离线编程及示教器，独立完成搬运、装配任务的路径规划与程序编写，配合进行数据采集与效果验证。</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section class="edu-section">
+  <div class="container">
+    <div class="section-kicker">[ 教育背景 ]</div>
+    <h2 class="section-headline">学术根基</h2>
+    <div class="edu-card">
+      <div class="edu-body">
+        <h3 class="edu-school">广东工商<br>职业技术大学</h3>
+        <p class="edu-major-tag">工业机器人技术 &middot; 本科</p>
+        <p class="edu-details">
+          核心课程：高等数学、线性代数、C 程序设计、电力电子技术
+        </p>
+      </div>
+      <div class="edu-sidebar">
+        <span>2019.09 &ndash; 2023.06</span>
+        <div class="honor">校奖学金</div>
+        <div class="honor">第十二届全国大学生创新大赛广东省内特等奖</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<section class="skills-section">
+  <div class="container">
+    <div class="section-kicker">[ 技能 ]</div>
+    <h2 class="section-headline">能力矩阵</h2>
+    <div class="skills-matrix">
+      <span class="skill-item">RobotStudio 离线编程</span>
+      <span class="skill-item">示教器操作</span>
+      <span class="skill-item">传感器数据监测</span>
+      <span class="skill-item">陌拜开发</span>
+      <span class="skill-item">面谈破冰</span>
+      <span class="skill-item">异议处理</span>
+      <span class="skill-item">签约回款</span>
+      <span class="skill-item">Excel 数据透视</span>
+      <span class="skill-item">PPT 方案撰写</span>
+      <span class="skill-item">CET-4</span>
+    </div>
+  </div>
+</section>
+
+<hr class="section-rule">
+
+<footer class="site-footer">
+  <div class="container">
+    谢辉 &copy; 2026 &middot; 随时到岗 &middot; 意向城市：广州 / 深圳 / 苏州 / 上海
+  </div>
+</footer>
+
+</body>
+</html>
