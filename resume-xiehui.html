@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>谢辉 — 个人简历</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Grain texture overlay -->
+    <svg class="grain-overlay" aria-hidden="true">
+        <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.015"/>
+            </feComponentTransfer>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain)"/>
+    </svg>
+
+    <div class="container">
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="masthead-inner">
+                <div class="masthead-text">
+                    <h1 class="name">谢辉</h1>
+                    <p class="role-line">团队管理 &middot; 数据采集 &middot; 流程标准化</p>
+                </div>
+                <address class="contact-strip">
+                    <span>2001 年 10 月</span>
+                    <span class="contact-sep">/</span>
+                    <span>14737447716</span>
+                    <span class="contact-sep">/</span>
+                    <span>2809693454@qq.com</span>
+                    <span class="contact-sep">/</span>
+                    <span>男</span>
+                </address>
+            </div>
+        </header>
+
+        <!-- Two-column body -->
+        <div class="layout">
+            <!-- Left: main narrative -->
+            <div class="primary">
+
+                <!-- Summary -->
+                <section class="card">
+                    <h2 class="card-heading">个人概述</h2>
+                    <p class="summary">具备团队管理、数据采集、电商运营三重经验背景。先后管理过 6 人门店团队与 30 人数据采集团队；深入参与机器人数据采集全流程（数采、推理、接管、评测、质检），理解从任务设计到数据验收的完整闭环。技术与管理复合背景，工业机器人技术本科，具备 C 程序设计基础，能独立完成设备故障排查与代码调试。擅长将非标准化任务拆解为可执行的标准化流程，熟练使用 Claude Code、OpenClaw 等 AI 工具提升效率。</p>
+                </section>
+
+                <!-- Experience -->
+                <section class="card">
+                    <h2 class="card-heading">工作经历</h2>
+
+                    <div class="timeline">
+                        <!-- Job 1 -->
+                        <article class="exp-entry">
+                            <div class="exp-marker" aria-hidden="true">
+                                <span class="ring"></span>
+                            </div>
+                            <div class="exp-body">
+                                <header class="exp-header">
+                                    <span class="exp-period">2026.02 — 2026.06</span>
+                                    <h3 class="exp-org">自变量机器人科技（深圳）有限公司</h3>
+                                </header>
+                                <p class="exp-role">数据采集团队副组长</p>
+                                <ul class="exp-list">
+                                    <li>负责 30 人数据采集团队的日常任务分配与进度排期，制定排班计划并跟踪执行，确保日/周任务按时交付</li>
+                                    <li>负责机械臂及采集设备的日常维护与故障排查，独立处理常见硬件与软件问题；遇复杂故障定位根因并协调维修部处理，保障采集作业连续性</li>
+                                    <li>基于 C 语言技术背景，参与设备控制脚本调试、参数优化及日志分析，提升设备运行稳定性</li>
+                                    <li>建立数据抽检机制，监控组员采集数据质量，对异常数据进行复核与修正，确保输出数据符合算法训练标准</li>
+                                    <li>负责新入职数采员岗前培训，讲解采集规范、接管技巧及设备操作要点，累计带教 10 人</li>
+                                    <li>总结高频设备故障类型，主动排查共性问题并优化预防机制，降低重复故障发生率</li>
+                                    <li>熟悉数据采集、质检、标注、项目出差等全岗位流程，根据项目需求灵活调配人员与资源</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Job 2 -->
+                        <article class="exp-entry">
+                            <div class="exp-marker" aria-hidden="true">
+                                <span class="ring"></span>
+                            </div>
+                            <div class="exp-body">
+                                <header class="exp-header">
+                                    <span class="exp-period">2024.08 — 2026.02</span>
+                                    <h3 class="exp-org">深圳市弘钧科技有限公司</h3>
+                                </header>
+                                <p class="exp-role">亚马逊运营主管</p>
+                                <ul class="exp-list">
+                                    <li>管理 5 人运营团队，负责任务分配、进度跟踪、绩效考核及新人带教（累计带教 5 人，平均上岗周期 7–10 天），参与运营岗位面试筛选</li>
+                                    <li>统筹产品上架全流程，优化标题、关键词、图片及五点描述，提升搜索排名与转化率；核心产品差评率下降 30%，店铺评分从 4.1 提升至 4.6</li>
+                                    <li>作为运营端与产品开发端的桥梁，将产品端的开发思路与运营端对接，推动核心产品的链接打造以及后续流量入口与广告策略调整</li>
+                                    <li>主导制定产品上架 SOP 及运营规范，统一团队操作标准，提升工作效率与输出质量一致性</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- Job 3 -->
+                        <article class="exp-entry">
+                            <div class="exp-marker" aria-hidden="true">
+                                <span class="ring"></span>
+                            </div>
+                            <div class="exp-body">
+                                <header class="exp-header">
+                                    <span class="exp-period">2023.08 — 2024.07</span>
+                                    <h3 class="exp-org">广州乐有家控股集团有限公司</h3>
+                                </header>
+                                <p class="exp-role">店长</p>
+                                <ul class="exp-list">
+                                    <li>直接管理 6 人销售团队，主持每日晨会及复盘会（日均 2 场），跟进团队成员任务执行情况，及时汇总关键问题并向区域总监反馈，确保信息传递准确、无遗漏</li>
+                                    <li>统筹员工带看日程、房源核查及客户约见安排，日均并行处理 15 项任务，通过优先级分类管理保障各项事务有序推进，任职期间无调度冲突或客户投诉</li>
+                                    <li>负责客户带看全流程筹备支持工作，包括房源信息核查、风险事项整理及带看资料准备，累计支持带看服务逾百组，保持零投诉记录</li>
+                                    <li>熟练使用 Office 办公软件及内部业务系统，负责日常数据录入、报表整理与会议记录，工作细致严谨、按流程规范执行</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right: sidebar -->
+            <aside class="secondary">
+
+                <!-- Education -->
+                <section class="card">
+                    <h2 class="card-heading">教育背景</h2>
+                    <div class="edu-block">
+                        <span class="edu-period-tag">2019.09 — 2023.06</span>
+                        <p class="edu-school">广东工商技术大学</p>
+                        <p class="edu-major">工业机器人技术 · 本科</p>
+                        <ul class="edu-courses">
+                            <li>核心课程：线性代数、高等数学、C 程序设计、电力电子技术</li>
+                        </ul>
+                        <div class="award-chips">
+                            <span>校奖学金</span>
+                            <span>第十二届全国大学生创新大赛广东省内特等奖</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Core Strengths -->
+                <section class="card">
+                    <h2 class="card-heading">核心优势</h2>
+                    <ul class="strength-list">
+                        <li>
+                            <strong>学习能力强</strong>
+                            <span>熟练使用 Claude Code、OpenClaw 等 AI 软件提高工作效率，快速掌握新工具与新流程</span>
+                        </li>
+                        <li>
+                            <strong>大规模团队管理经验</strong>
+                            <span>先后管理 6 人门店团队与 30 人数据采集团队，擅长任务分配、进度排期、标准化培训与日常监督</span>
+                        </li>
+                        <li>
+                            <strong>机器人数据采集全流程熟悉</strong>
+                            <span>深入参与数采、推理、接管、评测、质检全环节，理解从任务设计到数据验收的完整闭环</span>
+                        </li>
+                        <li>
+                            <strong>技术与管理复合背景</strong>
+                            <span>工业机器人技术本科，具备 C 程序设计基础，能进行设备故障排查与代码调试</span>
+                        </li>
+                        <li>
+                            <strong>复杂需求拆解与流程标准化</strong>
+                            <span>擅长将非标准化任务转化为可执行的标准化作业流程，建立数据质量把控机制</span>
+                        </li>
+                        <li>
+                            <strong>多线程项目管理</strong>
+                            <span>日均并行处理多任务，具备优先级分类管理与突发情况快速响应能力</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Skills -->
+                <section class="card">
+                    <h2 class="card-heading">专业技能</h2>
+                    <div class="skill-groups">
+                        <div class="skill-group">
+                            <h4>团队管理</h4>
+                            <p>任务分配与排期、绩效考核、新人带教、流程标准化、跨部门协作</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>数据采集</h4>
+                            <p>数据质量抽检、设备故障排查、日志分析、机械臂维护</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>电商运营</h4>
+                            <p>Listing 优化、亚马逊运营、关键词优化、数据分析</p>
+                        </div>
+                        <div class="skill-group">
+                            <h4>技术能力</h4>
+                            <p>C 语言、Office 办公套件、脚本调试、参数优化</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-foot">
+            <p>感谢您花时间阅读我的简历，期待进一步沟通</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
